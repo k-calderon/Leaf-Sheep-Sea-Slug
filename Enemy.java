@@ -9,6 +9,7 @@ public class Enemy {
     private int defense;
     private int HP;
     private int[] position;
+    private boolean poison;
 
     /**
      * Initializes a new enemy with hit points, attack power, defense
@@ -49,6 +50,11 @@ public class Enemy {
         return position;
     }
 
+    /** @return status of the poison condition */
+    public boolean getPoison() {
+        return poison;
+    }
+
     /**
      * Sets the attack power of the enemy.
      * 
@@ -85,6 +91,14 @@ public class Enemy {
     private void setPosition(int x, int y) {
         this.position[0] = x;
         this.position[1] = y;
+    }
+
+    /**
+     * Sets the poison condition on the enemy
+     * @param poison whether or not the poison condition is on the enemy
+     */
+    private void setPoison(boolean poison) {
+        this.poison = poison;
     }
 
     /**
